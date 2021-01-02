@@ -208,6 +208,14 @@ name of the appropriate distribution. Also be sure that you don't have the
 Microsoft-distributed OpenSSH client installed or that one may be used instead
 of the WSL one.
 
+#### Powershell function
+
+You can put this function into your Profile.ps1
+
+```powershell
+function ssh { wsl --exec ssh "-oSecurityKeyProvider=libwindowsfidobridge.so" $args }
+```
+
 ## References
 
 * [Web Authentication: An API for accessing Public Key Credentials, Level
